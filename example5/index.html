@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accessibility Mistakes</title>
+    <!-- Missing meta viewport tag -->
+</head>
+<body>
+
+    <!-- Missing lang attribute in <html> -->
+    <header>
+        <h1>Accessibility Mistakes Example</h1>
+    </header>
+
+    <!-- Image with no alt attribute -->
+    <img src="example.jpg">
+
+    <!-- Link with vague text -->
+    <a href="details.html">Click here</a>
+
+    <!-- Table with no headers -->
+    <table>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Jane</td>
+            <td>Smith</td>
+            <td>25</td>
+        </tr>
+    </table>
+
+    <!-- Form with no submit button -->
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+    </form>
+
+    <!-- Text with poor contrast -->
+    <p style="color: #bbbbbb; background-color: #ffffff;">This text is hard to read due to poor contrast.</p>
+
+    <!-- Non-descriptive ARIA role -->
+    <div role="contentinfo">
+        <p>This is a content section, but the role is misused.</p>
+    </div>
+
+    <!-- Missing focus management -->
+    <button onclick="document.getElementById('hiddenContent').style.display='block';">Show Content</button>
+    <div id="hiddenContent" style="display: none;">
+        <p>This content is revealed, but focus is not managed.</p>
+    </div>
+
+    <!-- Audio autoplay with no controls -->
+    <audio autoplay>
+        <source src="audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <footer>
+        <p>Contact us for accessibility feedback.</p>
+    </footer>
+
+</body>
+</html>

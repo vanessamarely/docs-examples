@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Accessibility Errors</title>
+    <!-- Missing meta viewport tag -->
+  </head>
+  <body>
+    <!-- Missing lang attribute in <html> -->
+    <header>
+      <h1>Accessibility Errors Example</h1>
+    </header>
+
+    <!-- Image with incorrect alt text -->
+    <img src="graph.jpg" alt="Graph" />
+
+    <!-- Link with no accessible name -->
+    <a href="#">Read more</a>
+
+    <!-- Form with no labels -->
+    <form>
+      <input type="text" placeholder="First Name" />
+      <input type="text" placeholder="Last Name" />
+      <button>Submit</button>
+    </form>
+
+    <!-- Table with no headers or captions -->
+    <table>
+      <tr>
+        <td>Product</td>
+        <td>Price</td>
+      </tr>
+      <tr>
+        <td>Apple</td>
+        <td>$1</td>
+      </tr>
+      <tr>
+        <td>Banana</td>
+        <td>$0.5</td>
+      </tr>
+    </table>
+
+    <!-- Video with autoplay and no captions -->
+    <video autoplay>
+      <source src="video.mp4" type="video/mp4" />
+      Your browser does not support the video element.
+    </video>
+
+    <!-- Poor keyboard navigation -->
+    <div tabindex="0">
+      <p>This div is focusable but does not provide meaningful interaction.</p>
+    </div>
+
+    <!-- Color contrast issues -->
+    <p style="color: #dddddd; background-color: #ffffff">
+      This text has insufficient contrast.
+    </p>
+
+    <!-- Incorrect ARIA usage -->
+    <div role="banner">
+      <p>This is a banner role used incorrectly in a non-banner context.</p>
+    </div>
+
+    <footer>
+      <p>Contact us for accessibility feedback.</p>
+    </footer>
+  </body>
+</html>

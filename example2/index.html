@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Accessibility Issues</title>
+  </head>
+  <body>
+    <!-- Missing lang attribute in <html> -->
+    <header>
+      <h1>Our Website</h1>
+    </header>
+
+    <!-- Image with incorrect alt text -->
+    <img src="image.jpg" alt="" />
+
+    <!-- Link with unclear purpose -->
+    <a href="#">More</a>
+
+    <!-- Button with no accessible name -->
+    <button></button>
+
+    <!-- Missing heading hierarchy -->
+    <h4>Subsection</h4>
+    <p>This is a subsection without a proper heading hierarchy.</p>
+
+    <!-- Missing skip link -->
+    <section id="maincontent">
+      <h2>Main Section</h2>
+      <p>This is the main section of the page.</p>
+    </section>
+
+    <!-- Form field without label -->
+    <form>
+      <input type="email" placeholder="Enter your email" />
+    </form>
+
+    <!-- Incorrect ARIA usage -->
+    <div role="button">
+      <p>This is a div styled as a button but lacks proper functionality.</p>
+    </div>
+
+    <!-- Non-descriptive link text -->
+    <a href="page.html">Click</a>
+
+    <!-- Color contrast issues -->
+    <p style="color: lightgray; background-color: white">
+      This text has poor contrast.
+    </p>
+
+    <footer>
+      <p>Contact us for details.</p>
+    </footer>
+  </body>
+</html>

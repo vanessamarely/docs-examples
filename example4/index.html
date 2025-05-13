@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WCAG Issues Example</title>
+    <!-- Missing meta viewport tag -->
+</head>
+<body>
+
+    <!-- Missing lang attribute in <html> -->
+    <header>
+        <h1>WCAG Test Page</h1>
+    </header>
+
+    <!-- Non-descriptive page title -->
+    <title>Page</title>
+
+    <!-- Image with misleading alt text -->
+    <img src="chart.jpg" alt="Beautiful image">
+
+    <!-- Link with no focus indicator -->
+    <a href="page.html" style="outline: none;">Visit Page</a>
+
+    <!-- Form with placeholder instead of label -->
+    <form>
+        <input type="text" placeholder="Enter your name">
+        <input type="email" placeholder="Enter your email">
+        <button>Submit</button>
+    </form>
+
+    <!-- Audio content with no captions or transcript -->
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Video content with no captions -->
+    <video controls>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+
+    <!-- Poor keyboard navigation -->
+    <div tabindex="0">
+        <p>This div is focusable but does not provide meaningful interaction.</p>
+    </div>
+
+    <!-- Color contrast issues -->
+    <p style="color: #aaaaaa; background-color: #ffffff;">This text has poor contrast.</p>
+
+    <!-- Redundant ARIA roles -->
+    <nav role="navigation">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>Contact us for accessibility feedback.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accessibility Test</title>
+    <!-- Missing meta viewport tag -->
+</head>
+<body>
+
+    <!-- Missing lang attribute in <html> -->
+    <header>
+        <h1>Accessibility Test Page</h1>
+    </header>
+
+    <!-- Decorative image without alt text -->
+    <img src="decorative.jpg">
+
+    <!-- Link with no href attribute -->
+    <a>Broken Link</a>
+
+    <!-- Button with inaccessible text -->
+    <button><span style="display: none;">Submit</span></button>
+
+    <!-- Non-descriptive heading -->
+    <h2>Section</h2>
+    <p>This section lacks a descriptive heading.</p>
+
+    <!-- Missing form labels -->
+    <form>
+        <input type="text" placeholder="Name">
+        <input type="password" placeholder="Password">
+        <button>Login</button>
+    </form>
+
+    <!-- Overuse of ARIA roles -->
+    <div role="main">
+        <div role="article">
+            <p>This is an article inside a main role, which is redundant.</p>
+        </div>
+    </div>
+
+    <!-- Poor keyboard navigation -->
+    <div tabindex="0">
+        <p>This div is focusable but does not provide meaningful interaction.</p>
+    </div>
+
+    <!-- Color contrast issues -->
+    <p style="color: #cccccc; background-color: #ffffff;">This text has insufficient contrast.</p>
+
+    <footer>
+        <p>Contact us for accessibility feedback.</p>
+    </footer>
+
+</body>
+</html>

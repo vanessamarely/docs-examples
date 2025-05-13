@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Accessibility</title>
+</head>
+<body>
+
+    <!-- Missing lang attribute in <html> -->
+    <header>
+        <h1>Welcome to Our Website</h1>
+    </header>
+
+    <!-- Image without alt text -->
+    <img alt="image" src="image.jpg">
+
+    <!-- Empty link -->
+    <a href="#">Click here</a>
+
+    <!-- Empty button -->
+    <button></button>
+
+    <!-- Ambiguous link (short text) -->
+    <a href="#">Go</a>
+
+    <!-- Missing skip link -->
+    <section id="maincontent">
+        <h2>Main Content</h2>
+        <p>This is the main content section.</p>
+    </section>
+
+    <!-- Form field without label -->
+    <form>
+        <input type="text">
+    </form>
+
+    <!-- Incorrect ARIA usage (missing region role) -->
+    <div class="content">
+        <p>This is a content section with no ARIA roles.</p>
+    </div>
+
+    <!-- Missing DOCTYPE declaration (already fixed) -->
+    <!-- Should be <!DOCTYPE html> -->
+
+    <footer>
+        <p>Contact us for more information.</p>
+    </footer>
+
+</body>
+</html>
