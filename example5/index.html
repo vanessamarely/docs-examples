@@ -1,65 +1,76 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Accessibility Mistakes</title>
     <!-- Missing meta viewport tag -->
-</head>
-<body>
-
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="test-accessibility">
     <!-- Missing lang attribute in <html> -->
     <header>
-        <h1>Accessibility Mistakes Example</h1>
+      <h1>Accessibility Mistakes Example</h1>
     </header>
+    <main>
+      <!-- Image with no alt attribute -->
+      <img src="./../assets/image.jpg" />
 
-    <!-- Image with no alt attribute -->
-    <img src="example.jpg">
+      <!-- Link with vague text -->
+      <a href="./../example3/index.html">Click here</a>
 
-    <!-- Link with vague text -->
-    <a href="details.html">Click here</a>
-
-    <!-- Table with no headers -->
-    <table>
+      <!-- Table with no headers -->
+      <table>
         <tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>30</td>
+          <td>John</td>
+          <td>Doe</td>
+          <td>30</td>
         </tr>
         <tr>
-            <td>Jane</td>
-            <td>Smith</td>
-            <td>25</td>
+          <td>Jane</td>
+          <td>Smith</td>
+          <td>25</td>
         </tr>
-    </table>
+      </table>
 
-    <!-- Form with no submit button -->
-    <form>
+      <!-- Form with no submit button -->
+      <form>
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
-    </form>
+        <input type="text" id="username" name="username" />
+      </form>
 
-    <!-- Text with poor contrast -->
-    <p style="color: #bbbbbb; background-color: #ffffff;">This text is hard to read due to poor contrast.</p>
+      <!-- Text with poor contrast -->
+      <p style="color: #bbbbbb; background-color: #ffffff">
+        This text is hard to read due to poor contrast.
+      </p>
 
-    <!-- Non-descriptive ARIA role -->
-    <div role="contentinfo">
+      <!-- Non-descriptive ARIA role -->
+      <div role="contentinfo">
         <p>This is a content section, but the role is misused.</p>
-    </div>
+      </div>
 
-    <!-- Missing focus management -->
-    <button onclick="document.getElementById('hiddenContent').style.display='block';">Show Content</button>
-    <div id="hiddenContent" style="display: none;">
+      <!-- Missing focus management -->
+      <button
+        onclick="document.getElementById('hiddenContent').style.display='block';"
+      >
+        Show Content
+      </button>
+      <div id="hiddenContent" style="display: none">
         <p>This content is revealed, but focus is not managed.</p>
-    </div>
+      </div>
 
-    <!-- Audio autoplay with no controls -->
-    <audio autoplay>
-        <source src="audio.mp3" type="audio/mpeg">
+      <!-- Audio autoplay with no controls -->
+      <audio autoplay>
+        <source src="./../assets/audio.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
-    </audio>
-
+      </audio>
+    </main>
     <footer>
-        <p>Contact us for accessibility feedback.</p>
+      <p>Contact us for accessibility feedback.</p>
     </footer>
-
-</body>
+  </body>
 </html>

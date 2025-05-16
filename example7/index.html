@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Form Test</title>
-</head>
-<body>
-
-    <!-- Form with fields lacking labels -->
-    <form>
-        <input type="text" name="name" placeholder="Your name">
-        <input type="email" name="email">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="test-accessibility">
+    <main>
+      <!-- Form with fields lacking labels -->
+      <form>
+        <input type="text" name="name" placeholder="Your name" />
+        <input type="email" name="email" />
         <select>
-            <option value="1">One</option>
+          <option value="1">One</option>
         </select>
-    </form>
+      </form>
 
-    <!-- Button with only icon, missing aria-label -->
-    <button><i class="icon-send"></i></button>
-
-</body>
+      <!-- Button with only icon, missing aria-label -->
+      <button><i class="icon-send"></i></button>
+    </main>
+  </body>
 </html>

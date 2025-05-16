@@ -3,17 +3,32 @@
   <head>
     <title></title>
     <!-- Missing descriptive title -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <!-- SVG without aria-label or aria-hidden -->
-    <svg viewBox="0 0 100 100">
-      <circle cx="50" cy="50" r="40" />
-    </svg>
+  <body class="test-accessibility">
+    <div class="test-accessibility__content">
+      <!-- SVG without aria-label or aria-hidden -->
+      <svg viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" />
+      </svg>
 
-    <!-- Canvas without fallback content -->
-    <canvas></canvas>
+      <!-- Canvas without fallback content -->
+      <canvas></canvas>
 
-    <!-- Object without fallback or text alternative -->
-    <object data="movie.swf" type="application/x-shockwave-flash"></object>
+      <!-- Object without fallback or text alternative -->
+      <object
+        data="./../assets/movie.mp4"
+        type="
+video/mp4"
+        width="300"
+        height="200"
+      ></object>
+    </div>
   </body>
 </html>

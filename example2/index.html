@@ -2,50 +2,60 @@
 <html>
   <head>
     <title>Accessibility Issues</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
+  <body class="test-accessibility">
     <!-- Missing lang attribute in <html> -->
     <header>
       <h1>Our Website</h1>
     </header>
+    <main>
+      <!-- Image with incorrect alt text -->
+      <img alt="" src="./../assets/image.jpg" />
 
-    <!-- Image with incorrect alt text -->
-    <img src="image.jpg" alt="" />
+      <!-- Link with unclear purpose -->
+      <a href="#">More</a>
 
-    <!-- Link with unclear purpose -->
-    <a href="#">More</a>
+      <!-- Button with no accessible name -->
+      <button></button>
 
-    <!-- Button with no accessible name -->
-    <button></button>
+      <!-- Missing heading hierarchy -->
+      <h4>Subsection</h4>
+      <p>This is a subsection without a proper heading hierarchy.</p>
 
-    <!-- Missing heading hierarchy -->
-    <h4>Subsection</h4>
-    <p>This is a subsection without a proper heading hierarchy.</p>
+      <!-- Missing skip link -->
+      <section id="maincontent">
+        <h2>Main Section</h2>
+        <p>This is the main section of the page.</p>
+      </section>
+      <section class="test-accessibility__content">
+        <!-- Form field without label -->
+        <form>
+          <input type="email" placeholder="Enter your email" />
+        </form>
 
-    <!-- Missing skip link -->
-    <section id="maincontent">
-      <h2>Main Section</h2>
-      <p>This is the main section of the page.</p>
-    </section>
+        <!-- Incorrect ARIA usage -->
+        <div role="button">
+          <p>
+            This is a div styled as a button but lacks proper functionality.
+          </p>
+        </div>
 
-    <!-- Form field without label -->
-    <form>
-      <input type="email" placeholder="Enter your email" />
-    </form>
+        <!-- Non-descriptive link text -->
+        <a href="./../example1/index.html">Click</a>
 
-    <!-- Incorrect ARIA usage -->
-    <div role="button">
-      <p>This is a div styled as a button but lacks proper functionality.</p>
-    </div>
-
-    <!-- Non-descriptive link text -->
-    <a href="page.html">Click</a>
-
-    <!-- Color contrast issues -->
-    <p style="color: lightgray; background-color: white">
-      This text has poor contrast.
-    </p>
-
+        <!-- Color contrast issues -->
+        <p style="color: lightgray; background-color: white">
+          This text has poor contrast.
+        </p>
+      </section>
+    </main>
     <footer>
       <p>Contact us for details.</p>
     </footer>

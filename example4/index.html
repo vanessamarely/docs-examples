@@ -1,63 +1,74 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>WCAG Issues Example</title>
     <!-- Missing meta viewport tag -->
-</head>
-<body>
-
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="test-accessibility">
     <!-- Missing lang attribute in <html> -->
     <header>
-        <h1>WCAG Test Page</h1>
+      <h1>WCAG Test Page</h1>
     </header>
+    <main>
+      <section class="test-accessibility__content">
+        <!-- Non-descriptive page title -->
+        <title>Page</title>
 
-    <!-- Non-descriptive page title -->
-    <title>Page</title>
+        <!-- Image with misleading alt text -->
+        <img alt="Beautiful image" src="./../assets/image.jpg" />
 
-    <!-- Image with misleading alt text -->
-    <img src="chart.jpg" alt="Beautiful image">
+        <!-- Link with no focus indicator -->
+        <a href="./../example1/index.html" style="outline: none">Visit Page</a>
 
-    <!-- Link with no focus indicator -->
-    <a href="page.html" style="outline: none;">Visit Page</a>
+        <!-- Form with placeholder instead of label -->
+        <form>
+          <input type="text" placeholder="Enter your name" />
+          <input type="email" placeholder="Enter your email" />
+          <button>Submit</button>
+        </form>
+      </section>
+      <section class="test-accessibility__audio-video">
+        <!-- Audio content with no captions or transcript -->
+        <audio controls>
+          <source src="./../assets/audio.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
 
-    <!-- Form with placeholder instead of label -->
-    <form>
-        <input type="text" placeholder="Enter your name">
-        <input type="email" placeholder="Enter your email">
-        <button>Submit</button>
-    </form>
+        <!-- Video content with no captions -->
+        <video controls>
+          <source src="./../assets/video.mp4" type="video/mp4" />
+          Your browser does not support the video element.
+        </video>
+      </section>
+      <!-- Poor keyboard navigation -->
+      <div tabindex="0">
+        <p>
+          This div is focusable but does not provide meaningful interaction.
+        </p>
+      </div>
 
-    <!-- Audio content with no captions or transcript -->
-    <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+      <!-- Color contrast issues -->
+      <p style="color: #aaaaaa; background-color: #ffffff">
+        This text has poor contrast.
+      </p>
 
-    <!-- Video content with no captions -->
-    <video controls>
-        <source src="video.mp4" type="video/mp4">
-        Your browser does not support the video element.
-    </video>
-
-    <!-- Poor keyboard navigation -->
-    <div tabindex="0">
-        <p>This div is focusable but does not provide meaningful interaction.</p>
-    </div>
-
-    <!-- Color contrast issues -->
-    <p style="color: #aaaaaa; background-color: #ffffff;">This text has poor contrast.</p>
-
-    <!-- Redundant ARIA roles -->
-    <nav role="navigation">
+      <!-- Redundant ARIA roles -->
+      <nav role="navigation">
         <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
+          <li><a href="./../index.html">Home</a></li>
+          <li><a href="./../example8/index.html">About</a></li>
         </ul>
-    </nav>
-
+      </nav>
+    </main>
     <footer>
-        <p>Contact us for accessibility feedback.</p>
+      <p>Contact us for accessibility feedback.</p>
     </footer>
-
-</body>
+  </body>
 </html>

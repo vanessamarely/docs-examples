@@ -1,54 +1,65 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Accessibility Test</title>
     <!-- Missing meta viewport tag -->
-</head>
-<body>
-
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="test-accessibility">
     <!-- Missing lang attribute in <html> -->
     <header>
-        <h1>Accessibility Test Page</h1>
+      <h1>Accessibility Test Page</h1>
     </header>
+    <main>
+      <div class="test-accessibility__content">
+        <!-- Decorative image without alt text -->
+        <img src="./../assets/image.jpg" />
 
-    <!-- Decorative image without alt text -->
-    <img src="decorative.jpg">
+        <!-- Link with no href attribute -->
+        <a>Broken Link</a>
 
-    <!-- Link with no href attribute -->
-    <a>Broken Link</a>
+        <!-- Button with inaccessible text -->
+        <button><span style="display: none">Submit</span></button>
 
-    <!-- Button with inaccessible text -->
-    <button><span style="display: none;">Submit</span></button>
+        <!-- Non-descriptive heading -->
+        <h2>Section</h2>
+        <p>This section lacks a descriptive heading.</p>
 
-    <!-- Non-descriptive heading -->
-    <h2>Section</h2>
-    <p>This section lacks a descriptive heading.</p>
+        <!-- Missing form labels -->
+        <form>
+          <input type="text" placeholder="Name" />
+          <input type="password" placeholder="Password" />
+          <button>Login</button>
+        </form>
 
-    <!-- Missing form labels -->
-    <form>
-        <input type="text" placeholder="Name">
-        <input type="password" placeholder="Password">
-        <button>Login</button>
-    </form>
-
-    <!-- Overuse of ARIA roles -->
-    <div role="main">
-        <div role="article">
+        <!-- Overuse of ARIA roles -->
+        <div role="main">
+          <div role="article">
             <p>This is an article inside a main role, which is redundant.</p>
+          </div>
         </div>
-    </div>
 
-    <!-- Poor keyboard navigation -->
-    <div tabindex="0">
-        <p>This div is focusable but does not provide meaningful interaction.</p>
-    </div>
+        <!-- Poor keyboard navigation -->
+        <div tabindex="0">
+          <p>
+            This div is focusable but does not provide meaningful interaction.
+          </p>
+        </div>
 
-    <!-- Color contrast issues -->
-    <p style="color: #cccccc; background-color: #ffffff;">This text has insufficient contrast.</p>
-
+        <!-- Color contrast issues -->
+        <p style="color: #cccccc; background-color: #ffffff">
+          This text has insufficient contrast.
+        </p>
+      </div>
+    </main>
     <footer>
-        <p>Contact us for accessibility feedback.</p>
+      <p>Contact us for accessibility feedback.</p>
     </footer>
-
-</body>
+  </body>
 </html>
